@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="title">My Image Gallery</h1>
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('tech')">Technology</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/id/1011/300/200" class="gallery-item nature" onclick="openLightbox(this)" />
+    <img src="https://picsum.photos/id/1025/300/200" class="gallery-item nature" onclick="openLightbox(this)" />
+    <img src="https://picsum.photos/id/1035/300/200" class="gallery-item tech" onclick="openLightbox(this)" />
+    <img src="https://picsum.photos/id/1041/300/200" class="gallery-item tech" onclick="openLightbox(this)" />
+  </div>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
